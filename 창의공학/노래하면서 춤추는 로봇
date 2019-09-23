@@ -1,0 +1,210 @@
+1. 춤추는 로봇의 시나리오를 적는다.
+
+곰 세마리 동요에 맞추어서 그 동요를 스피커로 출력하고, 그에 맞추어 LED를 깜빡이며 춤추는 로봇을 만들었다.
+
+
+2. 스케치 소스코드를 적는다.
+
+#include <Servo.h>
+Servo sl;
+Servo sr;
+void setup()
+{
+  sl.attach(13);
+  sr.attach(12);
+  
+  tone(4, 261, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 261, 250);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 261, 250);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1400);
+  delay(500);
+  tone(4, 391, 250);
+  sr.write(1400);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1400);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1600);
+  delay(500);
+  tone(4, 391, 250);
+  sr.write(1600);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1600);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 261, 1000);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1400);
+  delay(500);
+  tone(4, 391, 500);
+  sr.write(1400);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1400);
+  delay(500);
+  tone(4, 261, 500);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 391, 1000);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 500);
+  sr.write(1600);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1600);
+  delay(500);
+  tone(4, 329, 500);
+  sr.write(1600);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1600);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 1000);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1400);
+  sr.write(1400);
+  delay(500);
+  tone(4, 261, 500);
+  sl.write(1600);
+  sr.write(1600);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1700);
+  sr.write(1700);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1700);
+  sr.write(1700);
+  delay(500);
+  tone(4, 391, 250);
+  sl.write(1700);
+  sr.write(1700);
+  delay(500);
+  tone(4, 440, 250);
+  sl.write(1700);
+  sr.write(1700);
+  delay(500);
+  tone(4, 391, 1000);
+  sl.write(1300);
+  sr.write(1300);
+  delay(500);
+  tone(4, 523, 500);
+  sl.write(1700);
+  sr.write(1300);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1300);
+  sr.write(1700);
+  delay(500);
+  tone(4, 523, 500);
+  sl.write(1700);
+  sr.write(1300);
+  delay(500);
+  tone(4, 391, 500);
+  sl.write(1300);
+  sr.write(1700);
+  delay(500);
+  tone(4, 329, 500);
+  sl.write(1700);
+  sr.write(1700);
+  delay(500);
+  tone(4, 293, 500);
+  sl.write(1700);
+  sr.write(1700);
+  delay(500);
+  tone(4, 261, 1000);
+  sl.write(1700);
+  sr.write(1700);
+  
+  sl.detach();
+  sr.detach();
+} 
+
+void loop() {
+  
+} 
+
+
+3. 동영상의 URL을 적는다.
+
+4. 소감을 적는다.
+
