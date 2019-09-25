@@ -1,0 +1,135 @@
+1. C언어의 특징과 장점을 적으시오.
+
+- 사람이 프로그램을 쉽게 이해하고 읽을 수 있도록 간결하게 표현 가능하다.
+- 서로 다른 컴퓨터 상에서 항상 같은 결과를 나타낸다.
+
+
+2. C언어의 활용에 대해 적으시오.
+
+- 운영체제 개발
+- 핸드폰 프로그래밍
+
+
+3. 두 실수를 메모리에 초기화, 더해서 화면에 출력하시오.
+
+#include <stdio.h>
+void main()
+{
+  float a,b;
+  a = 1.5;
+  b = 3.5;
+  printf("%f", a+b);
+}
+
+
+4. 두 실수를 키보드로 받고 더해서 화면에 출력하시오.
+
+#include <stdio.h>
+void main()
+{
+  float a,b;
+  printf("두 수를 입력하시오 : ");
+  scanf("%f%f", &a, &b);
+  printf("%f", a+b);
+}
+
+
+5. 두 실수를 메모리에 저장하고 함수 add()를 활용하여 더한 결과를 받아 화면에 출력하시오.
+
+#include <stdio.h>
+float add(float a, float b)
+{
+  return (a+b);
+}
+void main()
+{
+  float a,b;
+  a = 1.5;
+  b = 3.5;
+  printf("%f", add(a,b));
+}
+
+
+6. my.txt 에 33과 22가 들어있다. 이를 읽고 더하고 결과를 출력하시오.
+
+#include <stdio.h>
+void main()
+{
+  int a,b;
+  FILE *fp;
+  fp = fopen("my.txt","r");
+  fscanf(fp, "%d%d", &a, &b);
+  fclose(fp);
+  printf("%d", a+b);
+}
+
+
+7. 3개의 파일 {"Banana", "Orange", "Kiwi"}를 초기화하고 화면에 출력하시오.
+
+#include <stdio.h>
+void main()
+{
+  char a[20] = "Banana", b[20] = "Orange", c[20] = "Kiwi";
+  printf("%s\n", a);
+  printf("%s\n", b);
+  printf("%s\n", c);
+}
+
+
+8. 곱셈용 명령창 계산기를 구현하시오. 매개 변수가 2개 이하면 프로그램이 종료된다.
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(int n, char* v[])
+{
+  int a,b,c;
+  if (n<4)
+  {
+    printf("매개변수가 모자라요. \n");
+    exit(0);
+  }
+  a = atoi(v[1]);
+  b = atoi(v[3]);
+  switch (v[2][0])
+  {
+    case '*' : c = a  * b; break;
+    default : break;
+  }
+  printf("%d\n", c);
+}
+
+
+9. 두 명의 {이름, 나이, 이메일}을 구조체 배열에 초기화하고, 화면에 출력하시오.
+
+#include <stdio.h>
+struct user{
+  int age;
+  char n[20];
+  char e[30];
+};
+void main()
+{
+  int i;
+  struct user we[2] = {{20,"하보","gkdbtn@naver.com"},{14,"보하","dndbtn@naver.com"}};
+  for(i=0;i<2;i++)
+  {
+    printf("%d %s %s\n", we[i].age, we[i].n, we[i].e);
+  }
+}
+
+
+10. 두 명의 {이름, 나이 이메일}을 구조체 배열에 초기화하고 함수 pr()에 포인터 전달하고 화면에 출력하시오.
+
+#include <stdio.h>
+struct user
+{
+  int age;
+  char n[80], t[80];
+};
+void pr(struct user* we)
+{
+  printf("나이 이름 이메일 \n");
+  printf("%d %s %s\n", we->age, we->n, we->t);
+  we++;
+  printf("%d %s %s\n", we->age, we->n, we->t);
+}
