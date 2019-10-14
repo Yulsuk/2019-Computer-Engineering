@@ -22,9 +22,9 @@ void loop() {
 
 
 2. 구동화면
-![1](/Source/1.jpg)
-![1](/Source/2.jpg)
-![1](/Source/3.jpg)
+![1](/Source/1.png)
+![1](/Source/2.png)
+![1](/Source/3.png)
 
 
 3. 소감
