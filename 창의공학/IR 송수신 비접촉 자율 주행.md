@@ -1,5 +1,5 @@
-1. 아두이노 코드
-
+# 아두이노 코드
+```
 #include <Servo.h>
  
 Servo servoLeft;
@@ -9,7 +9,6 @@ void setup()
 {
   pinMode(10, INPUT);  pinMode(9, OUTPUT); 
   pinMode(3, INPUT);  pinMode(2, OUTPUT);
-  
   servoLeft.attach(13);                
   servoRight.attach(12);           
 }  
@@ -75,11 +74,11 @@ void backward(int time)
   servoRight.write(1700);
   delay(time);
 }
-
-2. 회로
+```
+# 2. 회로
 
 https://github.com/jjang1597/IT/blob/master/Source/IR%201.jpg
 
-3. 소감
+# 3. 소감
 
 
