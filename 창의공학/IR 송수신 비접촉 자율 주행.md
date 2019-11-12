@@ -11,12 +11,12 @@ void setup()
   pinMode(3, INPUT);  pinMode(2, OUTPUT);
   servoLeft.attach(13);                
   servoRight.attach(12);           
-}  
+}  //pinmode, servo 셋팅
  
 void loop()                             
 {
   int irLeft = irDetect(9, 10, 42000);      
-  int irRight = irDetect(2, 3, 42000);   
+  int irRight = irDetect(2, 3, 42000);   //IR이 감지됐는지 왼쪽 오른쪽 각각 irDetect 반환값을 확인
   if((irLeft == 0) && (irRight == 0))       
   {
     backward(1000);                     
@@ -42,9 +42,9 @@ int irDetect(int irLedPin, int irReceiverPin, long frequency)
 {
   tone(irLedPin, frequency, 8);            
   delay(1);                              
-  int ir = digitalRead(irReceiverPin);     
+  int ir = digitalRead(irReceiverPin);     //IR수신기 신호를 받는다     
   delay(1);                             
-  return ir;                             
+  return ir;               //반환              
 }  
 
 void forward(int time)                     
