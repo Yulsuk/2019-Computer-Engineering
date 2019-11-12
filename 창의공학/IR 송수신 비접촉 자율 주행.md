@@ -75,10 +75,10 @@ void backward(int time)
   delay(time);
 }
 ```
-# 2. 회로
+# 회로
 
-https://github.com/jjang1597/IT/blob/master/Source/IR%201.jpg
+![IR](/Source/IR.jpg)
 
-# 3. 소감
+# 소감
 
 
